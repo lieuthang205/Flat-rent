@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## model_train
-# 
-# null
-
-# In[3]:
 
 
 """
