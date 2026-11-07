@@ -668,7 +668,7 @@ dated {HOLDOUT_START.date()} to {AS_AT.date()}. The held-out adverts were never 
         from notebookutils import mssparkutils
         csv_text = sub.to_csv(index=False)
         for rel_dir in ["Files/kqdb", "Files"]:
-            for t_slug in [TEAM, "fant-rent", "team-35"]:
+            for t_slug in [TEAM, "quantum"]:
                 mssparkutils.fs.put(f"{ABFSS_ROOT}/{rel_dir}/rents_{t_slug}.csv", csv_text, True)
             mssparkutils.fs.put(f"{ABFSS_ROOT}/{rel_dir}/report.html", html, True)
         log(f"[OUTPUT] Saved CSVs and report.html directly to Lakehouse Data > Files/kqdb")
@@ -680,9 +680,9 @@ dated {HOLDOUT_START.date()} to {AS_AT.date()}. The held-out adverts were never 
         b64_csv = base64.b64encode(sub.to_csv(index=False).encode("utf-8")).decode("ascii")
         display(HTML(
             f'<div style="margin:12px 0;padding:12px;border:2px solid #1B365D;border-radius:8px;background:#f4f8fb">'
-            f'<b>Tải file nộp bài trực tiếp về máy:</b><br><br>'
-            f'<a download="rents_fant-rent.csv" href="data:text/csv;base64,{b64_csv}" '
-            f'style="background:#1B365D;color:#fff;padding:8px 14px;border-radius:5px;text-decoration:none;margin-right:10px">⬇ Tải rents_fant-rent.csv</a>'
+            f'<b> download this file:</b><br><br>'
+            f'<a download="rents_quantum.csv" href="data:text/csv;base64,{b64_csv}" '
+            f'style="background:#1B365D;color:#fff;padding:8px 14px;border-radius:5px;text-decoration:none;margin-right:10px">⬇ Tải rents_quantum.csv</a>'
             f'<a download="rents_team-35.csv" href="data:text/csv;base64,{b64_csv}" '
             f'style="background:#2B547E;color:#fff;padding:8px 14px;border-radius:5px;text-decoration:none;margin-right:10px">⬇ Tải rents_team-35.csv</a>'
             f'<a download="report.html" href="data:text/html;base64,{b64_rep}" '
