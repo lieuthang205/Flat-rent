@@ -1,4 +1,4 @@
-# What Will This Flat Rent For? — Team Quantum (`team-35`)
+# What Will This Flat Rent For? — Team Quantum
 
 **Microburbs Hackathon (7 November 2026) • Task 4: Weekly Rent With and Without a Car Space (City of Sydney)**
 
@@ -9,7 +9,7 @@
 We built an end-to-end rental valuation and parking-premium estimation pipeline ([`rents_city_of_sydney_model.py`](rents_city_of_sydney_model.py)) that predicts the expected weekly asking rent **with a car space** (`rent_with_car_space`) and **without a car space** (`rent_without_car_space`) for all **65,777 flats** across the 33 suburbs of the **City of Sydney** (as at **31 July 2026**, projected to the August–September 2026 scoring window).
 
 ### Key Deliverables in This Repository
-* **[`rents_quantum.csv`](rents_quantum.csv)** (and [`rents_team-35.csv`](rents_team-35.csv)): Official submission file containing all **65,777 `gnaf_id` rows**, zero blanks, rounded to `$0.50` increments.
+* **[`rents_quantum.csv`](rents_quantum.csv)** : Official submission file containing all **65,777 `gnaf_id` rows**, zero blanks, rounded to `$0.50` increments.
 * **[`report.html`](report.html)**: Standalone interactive HTML report presenting key empirical findings, held-out validation metrics, $R^2$, temporal split design, data sources, and methodology.
 * **[`rents_city_of_sydney_model.py`](rents_city_of_sydney_model.py)**: Reproducible training, validation, and inference script supporting both local execution and Microsoft Fabric Lakehouse / PySpark execution.
 
